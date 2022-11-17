@@ -13,7 +13,7 @@ class Vigenere:
             'A', 'B', 'C', 'D', 'E,' 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
         ])
-        self.key = list(key)
+        self.key = list(key.upper())
         self.message = ''
         self.encoded_message = ''
 
@@ -24,6 +24,7 @@ class Vigenere:
 
 def main():
     """main function"""
+    vig = Vigenere('HQE')
 
 
 if __name__ == "__main__":
