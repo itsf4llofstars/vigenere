@@ -29,6 +29,7 @@ class Vigenere:
 
     def rotate_key(self):
         """rotates the key list one letter"""
+        self.key.append(self.key.pop(0))
 
     def rotate_rotor(self):
         """rotates the rotor list one letter"""
@@ -45,6 +46,11 @@ def main():
     """main function"""
     vig = Vigenere('HQE')
     vig.set_key()
+
+    print(vig)
+
+    vig.rotate_key()
+    vig.rotate_rotor()
 
     print(vig)
 
