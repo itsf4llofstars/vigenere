@@ -27,6 +27,13 @@ class Vigenere:
         while self.rotor[0] != self.key[0]:
             deque.rotate(self.rotor, -1)
 
+    def rotate_key(self):
+        """rotates the key list one letter"""
+
+    def rotate_rotor(self):
+        """rotates the rotor list one letter"""
+        deque.rotate(self.rotor, -1)
+
     def get_letter_index(self, letter):
         """DOC"""
 
