@@ -37,7 +37,7 @@ class Vigenere:
     def get_letter_index(self, letter):
         """DOC"""
 
-    def git_letter(self, index):
+    def get_letter(self, index):
         """DOC"""
 
 
