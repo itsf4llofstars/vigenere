@@ -4,9 +4,10 @@ from collections import deque
 
 class Vigenere:
     """Vigenere class"""
-    def __init__(self,key: str) -> None:
+
+    def __init__(self, key: str) -> None:
         self.letters = [
-            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', \
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
         ]
         self.rotor = deque([
@@ -28,11 +29,10 @@ class Vigenere:
 
     def get_letter_index(self, letter):
         """DOC"""
-        pass
 
     def git_letter(self, index):
         """DOC"""
-        pass
+
 
 def main():
     """main function"""
