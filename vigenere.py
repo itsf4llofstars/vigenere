@@ -6,11 +6,11 @@ class Vigenere:
     """Vigenere class"""
     def __init__(self,key: str) -> None:
         self.letters = [
-            'A', 'B', 'C', 'D', 'E,' 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', \
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
         ]
         self.rotor = deque([
-            'A', 'B', 'C', 'D', 'E,' 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
         ])
         self.key = list(key.upper())
@@ -18,6 +18,7 @@ class Vigenere:
         self.encoded_message = ''
 
     def __repr__(self) -> str:
+        """return a string of attributes"""
         return f'{self.key = }\n{self.message = }\n{self.encoded_message = }\n{self.rotor = }'
 
     def set_key(self):
