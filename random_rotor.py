@@ -20,7 +20,8 @@ def create_list():
 
 
 def main():
-
+    """main"""
+    create_list()
 
 if __name__ == "__main__":
     main()
