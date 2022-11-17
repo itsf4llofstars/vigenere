@@ -19,6 +19,13 @@ def create_list():
             random_letters_list.append(letter)
 
 
+def shuffle_list(number: int = 1000):
+    """Shuffle list number times"""
+    if number > 0:
+        for _ in range(number):
+            random.shuffle(random_letters_list)
+
+
 def main():
     """main"""
     create_list()
