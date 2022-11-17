@@ -26,9 +26,19 @@ def shuffle_list(number: int = 1000):
             random.shuffle(random_letters_list)
 
 
+def print_random_list():
+    """print random list"""
+
+    [print(letter, end="") for letter in random_letters_list]
+    print()
+
+
 def main():
     """main"""
     create_list()
+    shuffle_list()
+    print_random_list()
+
 
 if __name__ == "__main__":
     main()
