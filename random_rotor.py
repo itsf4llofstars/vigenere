@@ -28,7 +28,6 @@ def shuffle_list(number: int = 1000):
 
 def print_random_list():
     """print random list"""
-
     [print(letter, end="") for letter in random_letters_list]
     print()
 
@@ -36,7 +35,7 @@ def print_random_list():
 def main():
     """main"""
     create_list()
-    shuffle_list()
+    shuffle_list(100000)
     print_random_list()
 
 
