@@ -26,11 +26,21 @@ class Vigenere:
         while self.rotor[0] != self.key[0]:
             deque.rotate(self.rotor, -1)
 
+    def get_letter_index(self, letter):
+        """DOC"""
+        pass
+
+    def git_letter(self, index):
+        """DOC"""
+        pass
+
 def main():
     """main function"""
     vig = Vigenere('HQE')
     vig.set_key()
+
     print(vig)
+
 
 if __name__ == "__main__":
     main()
