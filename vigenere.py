@@ -19,6 +19,7 @@ class Vigenere:
         self.message = ''
         self.encoded_message = ''
         self.letter = ''
+        self.encoded_letter = ''
         self.index = -1
 
     def __repr__(self) -> str:
@@ -45,24 +46,26 @@ class Vigenere:
             sys.exit()
         self.letter = a_letter
 
-    def get_letter_index(self, letter):
+    def get_letter_index(self):
         """DOC"""
+        self.index = self.letters.index(self.letter)
 
-    def get_letter_at_index(self, index):
+    def get_letter_at_index(self):
         """DOC"""
+        self.encoded_letter = self.rotor[self.index]
 
 
 def main():
     """main function"""
     vig = Vigenere('HQE')
     vig.set_key()
+    vig.get_letter()
+    vig.get_letter_index()
+    vig.get_letter_at_index()
+    print(vig.letter)
+    print(vig.index)
+    print(vig.encoded_letter)
 
-    print(vig)
-
-    vig.rotate_key()
-    vig.rotate_rotor()
-
-    print(vig)
 
 
 if __name__ == "__main__":
