@@ -1,4 +1,5 @@
 """vigenere.py class file"""
+import sys
 from collections import deque
 
 
@@ -17,6 +18,8 @@ class Vigenere:
         self.key = list(key.upper())
         self.message = ''
         self.encoded_message = ''
+        self.letter = ''
+        self.index = -1
 
     def __repr__(self) -> str:
         """return a string of attributes"""
@@ -35,10 +38,17 @@ class Vigenere:
         """rotates the rotor list one letter"""
         deque.rotate(self.rotor, -1)
 
+    def get_letter(self):
+        """DOC"""
+        a_letter = str(input("Enter a letter to be encoded [qq to quit]: ")).upper()
+        if a_letter == 'QQ':
+            sys.exit()
+        self.letter = a_letter
+
     def get_letter_index(self, letter):
         """DOC"""
 
-    def get_letter(self, index):
+    def get_letter_at_index(self, index):
         """DOC"""
 
 
