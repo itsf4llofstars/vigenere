@@ -66,6 +66,10 @@ class Vigenere:
     def get_letter_at_index(self):
         """DOC"""
         self.encoded_letter = self.rotor[self.index]
+    
+    def get_user_key(self):
+        """DOC"""
+        pass
 
 
 def main():
