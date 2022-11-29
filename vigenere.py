@@ -66,7 +66,7 @@ class Vigenere:
     def get_letter_at_index(self):
         """DOC"""
         self.encoded_letter = self.rotor[self.index]
-    
+
     def get_user_key(self):
         """DOC"""
         user_key =str(input("Enter your key: "))
@@ -76,6 +76,7 @@ class Vigenere:
 def main():
     """main function"""
     vig = Vigenere('HQE')
+    vig.get_user_key()
     vig.set_key()
     while True:
         vig.get_letter()
