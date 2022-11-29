@@ -69,7 +69,8 @@ class Vigenere:
     
     def get_user_key(self):
         """DOC"""
-        pass
+        user_key =str(input("Enter your key: "))
+        self.key = list(user_key.upper())
 
 
 def main():
