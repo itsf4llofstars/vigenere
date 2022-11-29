@@ -26,6 +26,19 @@ class Vigenere:
         """return a string of attributes"""
         return f'{self.key = }\n{self.message = }\n{self.encoded_message = }\n{self.rotor = }'
 
+    def show_vigenere(self):
+        """DOC"""
+        for letter in self.letters:
+            print(letter, end="")
+        print()
+        for letter in self.rotor:
+            print(letter, end="")
+        print()
+        print(self.key)
+        print(self.letter)
+        print(self.index)
+        print(self.encoded_letter)
+
     def set_key(self):
         """Sets rotor[0] equal to key[0]"""
         while self.rotor[0] != self.key[0]:
@@ -54,18 +67,27 @@ class Vigenere:
         """DOC"""
         self.encoded_letter = self.rotor[self.index]
 
+    def get_user_key(self):
+        """DOC"""
+        user_key =str(input("Enter your key: "))
+        self.key = list(user_key.upper())
+
 
 def main():
     """main function"""
     vig = Vigenere('HQE')
+    vig.get_user_key()
     vig.set_key()
-    vig.get_letter()
-    vig.get_letter_index()
-    vig.get_letter_at_index()
-    print(vig.letter)
-    print(vig.index)
-    print(vig.encoded_letter)
-
+    while True:
+        vig.get_letter()
+        vig.get_letter_index()
+        vig.get_letter_at_index()
+        vig.show_vigenere()
+        print(vig.letter)
+        print(vig.index)
+        print(vig.encoded_letter)
+        vig.rotate_key()
+        vig.set_key()
 
 
 if __name__ == "__main__":
